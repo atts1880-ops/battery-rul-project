@@ -16,4 +16,6 @@
 
 `checkpoints_stage5/` 只保留各方法在最终阶段的 seed 52/53/54 checkpoint；中间阶段 checkpoint 和大体积逐点预测未复制。`results/` 保存最终域指标、方法选择结果、bootstrap 与验收报告。
 
+`bhump_v10_nasa_dynamics_full320_runs/` 和 `bhump_v10_full320_target_control_runs/` 保存同种子连续训练所需的两组 V1.0 父 checkpoint，用于验证参数继承和构建匹配目标域控制。
+
 完整运行口径见 `CONTINUAL_V10_V15_README.md`。运行前需准备 V1.5 桥接域和四个微域数据，并将仓库根目录 `training/` 加入 `PYTHONPATH`。

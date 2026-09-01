@@ -1,0 +1,36 @@
+{
+  "seed": 53,
+  "checkpoint": "checkpoint_full320_nasa_dynamics_adaptive_seed_53.pt",
+  "target_devices": 320,
+  "source_devices": 5,
+  "tcn_epochs": 40,
+  "bstats_epochs": 45,
+  "intercell_epochs": 21,
+  "policy": {
+    "mode": "lifetime_support_gate",
+    "source_units": [
+      "B0005",
+      "B0018",
+      "B0033"
+    ],
+    "gamma": 0.0,
+    "blend_weight": 1.0,
+    "support_gated": true,
+    "fallback_to_uniform": false,
+    "selection_provenance": "majority_of_strict_nested_oof_folds",
+    "selection_frequency": 8,
+    "selection_total": 15
+  },
+  "training_resubstitution_metrics_not_for_model_claims": {
+    "rul_mae": 3.6711799590854683,
+    "rul_rmse": 4.905751641503201,
+    "rul_r2": 0.95604617261495,
+    "rul_bias": 0.7615860980394872,
+    "rul_p90_absolute_error": 7.847892040818807,
+    "worst_device_mae": 16.376393780629634,
+    "soh_mae": 0.010299056248539117,
+    "soh_rmse": 0.013015485628715146,
+    "soh_bias": -0.0006858531381462188
+  },
+  "completed_at_utc": "2026-08-08T16:12:08.892445+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "seed": 54,
+  "checkpoint": "checkpoint_full320_target_controls_seed_54.pt",
+  "tcn_epochs": 43,
+  "bstats_epochs": 44,
+  "intercell_epochs": 15,
+  "reference_units": [
+    "BV08TR_0220",
+    "BV08TR_0076",
+    "BV08TR_0253",
+    "BV08TR_0308",
+    "BV08TR_0151"
+  ],
+  "reference_policy": {
+    "mode": "uniform_fallback",
+    "source_positions": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "gamma": 0.0,
+    "blend_weight": 0.75,
+    "support_gated": false,
+    "fallback_to_uniform": true,
+    "selection_provenance": "median_of_15_strict_nested_oof_policies",
+    "source_units": [
+      "BV08TR_0220",
+      "BV08TR_0076",
+      "BV08TR_0253",
+      "BV08TR_0308",
+      "BV08TR_0151"
+    ]
+  },
+  "training_replay_target_ssl": {
+    "rul_mae": 4.247893037060803,
+    "rul_rmse": 5.812982048463187,
+    "rul_r2": 0.9382860213165081,
+    "rul_bias": -0.4310089348799639,
+    "rul_p90_absolute_error": 9.395265197753908,
+    "worst_device_mae": 14.674895840600646,
+    "soh_mae": 0.010408450500208003,
+    "soh_rmse": 0.01304530401123286,
+    "soh_bias": -0.000964140811427531
+  },
+  "training_replay_target_reference": {
+    "rul_mae": 3.64101505613012,
+    "rul_rmse": 4.906677243527033,
+    "rul_r2": 0.9560295849062365,
+    "rul_bias": 0.12996554474187028,
+    "rul_p90_absolute_error": 7.900095367431642,
+    "worst_device_mae": 15.397937430034984,
+    "soh_mae": 0.010408450500208003,
+    "soh_rmse": 0.01304530401123286,
+    "soh_bias": -0.000964140811427531
+  }
+}
