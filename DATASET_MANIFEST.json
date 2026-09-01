@@ -1,0 +1,47 @@
+{
+  "package": "final_battery_rul_ensemble_v10_with_data",
+  "model": {
+    "members": 3,
+    "seeds": [52, 53, 54],
+    "strict_oof_rul_mae_efc": 4.345603979546951,
+    "strict_oof_soh_mae": 0.011507625465559284
+  },
+  "source_domain": {
+    "name": "NASA Battery Aging Data Set",
+    "units": ["B0005", "B0018", "B0033", "B0043", "B0044"],
+    "device_count": 5,
+    "cycle_feature_rows": 202,
+    "cycle_feature_columns": 259,
+    "raw_format": "MATLAB .mat",
+    "labels_included": true
+  },
+  "target_domain": {
+    "name": "Basilisk V1.0 NASA-law calibrated target domain",
+    "training_device_count": 320,
+    "cycle_count": 24425,
+    "raw_curve_row_count": 2752050,
+    "minimum_curve_samples": 95,
+    "maximum_curve_samples": 135,
+    "cycle_feature_columns": 259,
+    "labels_included": true,
+    "eol_soh": 0.8
+  },
+  "frozen_model_input": {
+    "feature_count": 16,
+    "tcn_window_cycles": 24,
+    "causal_history_statistics": 38,
+    "capacity_is_input": false,
+    "soh_is_input": false,
+    "rul_is_input": false,
+    "eol_is_input": false
+  },
+  "excluded": {
+    "nasa_validation_units": ["B0030", "B0042"],
+    "nasa_sealed_units": ["B0038", "B0039"],
+    "basilisk_validation_devices": 80,
+    "basilisk_sealed_id_devices": 50,
+    "basilisk_temperature_ood_devices": 25,
+    "basilisk_load_ood_devices": 25,
+    "reason": "not used by the final full320 training run"
+  }
+}

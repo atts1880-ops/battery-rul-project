@@ -1,0 +1,27 @@
+{
+  "package": "final_battery_rul_ensemble_v10",
+  "model_members": 3,
+  "member_seeds": [52, 53, 54],
+  "target_supervised_devices_per_member": 320,
+  "contains_raw_source_data": false,
+  "contains_raw_target_data": false,
+  "contains_training_labels": false,
+  "contains_validation_or_sealed_data": false,
+  "contains_oof_predictions": false,
+  "inference_tests": {
+    "feature_table_rows": 24425,
+    "feature_table_devices": 320,
+    "all_predictions_finite": true,
+    "all_rul_nonnegative": true,
+    "raw_curve_adapter_rows": 63,
+    "raw_curve_vs_feature_max_soh_difference": 0.0,
+    "raw_curve_vs_feature_max_rul_difference": 0.0,
+    "future_perturbation_prefix_max_rul_difference": 0.0,
+    "causality_passed": true
+  },
+  "performance_claim": {
+    "strict_oof_rul_mae_efc": 4.345603979546951,
+    "strict_oof_soh_mae": 0.011507625465559284,
+    "training_replay_rul_mae_efc_not_for_generalization_claim": 3.555552559523294
+  }
+}

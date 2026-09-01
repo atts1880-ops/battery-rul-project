@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "unique_raw_units": 34,
+  "included_units": {
+    "train": 5,
+    "validation": 2,
+    "test": 2
+  },
+  "public_rows": {
+    "train": 202,
+    "validation": 67,
+    "test": 60
+  },
+  "label_rows": {
+    "train": 202,
+    "validation": 67,
+    "test": 60
+  },
+  "missing_values": 0,
+  "infinite_values": 0,
+  "duplicate_unit_time": 0,
+  "split_intersections": {
+    "train_validation": [],
+    "train_test": [],
+    "validation_test": [],
+    "calibration_any_target": []
+  },
+  "label_continuity_failures": [],
+  "test_labels_in_public": false,
+  "test_public_rows_per_unit": {
+    "B0038": 30,
+    "B0039": 30
+  },
+  "minimum_model_window_recommendation": 20,
+  "excluded_reason_counts": {
+    "no_stable_healthy_start_1p65_to_2p20ah": 10,
+    "right_censored_no_irreversible_1p60ah_eol": 7,
+    "experiment_stopped_by_software_crash": 4,
+    "calibration_excluded_v08": 2,
+    "capacity_spike_above_2p20ah": 1,
+    "eol_crossing_is_anomalously_deep_below_1p30ah": 1
+  }
+}

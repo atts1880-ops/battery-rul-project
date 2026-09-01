@@ -1,0 +1,25 @@
+{
+  "schema_version": "battery-target-v1.0-nasa-law-calibrated-curves",
+  "generated_at_utc": "2026-07-28T06:22:55.430823+00:00",
+  "derived_from": "D:\\basilisk-2.11.0\\battery_target_domain\\output\\v0.8_nasa_aligned_final\\formal",
+  "device_population_truth_splits_and_noise": "unchanged from V0.8/V0.9",
+  "only_changed_component": "diagnostic voltage/temperature observation law",
+  "diagnostic_law": "D:\\basilisk-2.11.0\\battery_target_domain\\nasa_diagnostic_law_v10.json",
+  "diagnostic_law_sha256": "10240ea988f496909d8554dfbc61b56d4e9bfd017f055e854a235b1a887e80ff",
+  "calibration_units": [
+    "B0005",
+    "B0018"
+  ],
+  "curve_fields": [
+    "unit_id",
+    "time",
+    "sample_index",
+    "elapsed_s",
+    "voltage_v",
+    "current_a",
+    "temperature_c"
+  ],
+  "eol_soh": 0.8,
+  "sealed_observation_efc": 30,
+  "validation_or_sealed_used_for_calibration": false
+}

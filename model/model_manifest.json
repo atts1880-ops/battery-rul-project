@@ -1,0 +1,45 @@
+{
+  "format": "bhump_v10_final_ensemble",
+  "format_version": 1,
+  "created_at_utc": "2026-08-09T01:24:03.114404+00:00",
+  "model_name": "NASA5 dynamics-adaptive TCN24+B_stats38 ensemble",
+  "ensemble_rule": "equal_weight_mean_of_three_final_rul_predictions",
+  "member_seeds": [
+    52,
+    53,
+    54
+  ],
+  "member_count": 3,
+  "feature_count": 16,
+  "features": [
+    "voltage_slope_segment_1",
+    "voltage_slope_segment_2",
+    "voltage_slope_per_second",
+    "delta_passage_time_v3p60_to_v3p55",
+    "delta_passage_time_v3p55_to_v3p50",
+    "delta_passage_time_v3p50_to_v3p45",
+    "delta_passage_time_v3p30_to_v3p25",
+    "delta_passage_time_v3p70_to_v3p65",
+    "delta_voltage_skew",
+    "delta_passage_time_v3p25_to_v3p20",
+    "delta_passage_time_v3p75_to_v3p70",
+    "delta_passage_time_v3p40_to_v3p35",
+    "delta_passage_time_v3p20_to_v3p15",
+    "delta_passage_time_v3p15_to_v3p10",
+    "delta_passage_time_v3p10_to_v3p05",
+    "delta_voltage_kurtosis"
+  ],
+  "eol_soh": 0.8,
+  "strict_oof_rul_mae_efc": 4.345603979546951,
+  "strict_oof_soh_mae": 0.011507625465559284,
+  "target_supervised_devices_per_member": 320,
+  "contains_raw_source_data": false,
+  "contains_raw_target_data": false,
+  "contains_validation_or_sealed_data": false,
+  "model_sha256": "e83d488df481995cac5b76c7521e413693ee90b4050d7a2f92ffb1c7223d99ea",
+  "source_checkpoint_sha256": {
+    "checkpoint_full320_nasa_dynamics_adaptive_seed_52.pt": "be74837729008922942df7f9bf2dc46d60f3c3eb0c48016358228a98ec3290a8",
+    "checkpoint_full320_nasa_dynamics_adaptive_seed_53.pt": "17b3aac2946ae9cfd8e2c72f7367abc47e3a19a604eff80d0f7971749f176082",
+    "checkpoint_full320_nasa_dynamics_adaptive_seed_54.pt": "2692d37819a87d519a72d4cb2c8bccfa4a83c34f38ab1451e6c362aa4c1a68d8"
+  }
+}

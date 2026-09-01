@@ -1,0 +1,15 @@
+# Python build and cache outputs
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Local environments and editor state
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Refit outputs are reproducible and should not overwrite the frozen release.
+retrained_full320/
+*.log

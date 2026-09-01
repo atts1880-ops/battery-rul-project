@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "schema_version": "battery-target-v1.0-nasa-law-calibrated-curves",
+  "mode": "formal",
+  "device_counts": {
+    "train": 320,
+    "validation": 80,
+    "sealed_id": 50,
+    "sealed_ood_temperature": 25,
+    "sealed_ood_load": 25
+  },
+  "public_cycle_counts": {
+    "train": 24425,
+    "validation": 6192,
+    "sealed_id": 1500,
+    "sealed_ood_temperature": 750,
+    "sealed_ood_load": 750
+  },
+  "public_curve_row_counts": {
+    "train": 2752050,
+    "validation": 696235,
+    "sealed_id": 179817,
+    "sealed_ood_temperature": 89784,
+    "sealed_ood_load": 89460
+  },
+  "minimum_curve_samples": 95,
+  "maximum_curve_samples": 135,
+  "split_intersections": {
+    "train__validation": [],
+    "train__sealed_id": [],
+    "train__sealed_ood_temperature": [],
+    "train__sealed_ood_load": [],
+    "validation__sealed_id": [],
+    "validation__sealed_ood_temperature": [],
+    "validation__sealed_ood_load": [],
+    "sealed_id__sealed_ood_temperature": [],
+    "sealed_id__sealed_ood_load": [],
+    "sealed_ood_temperature__sealed_ood_load": []
+  },
+  "sealed_prefix_cycles": 30,
+  "sealed_prefix_ok": true,
+  "label_monotonic_failures": [],
+  "public_curve_fields": [
+    "unit_id",
+    "time",
+    "sample_index",
+    "elapsed_s",
+    "voltage_v",
+    "current_a",
+    "temperature_c"
+  ],
+  "forbidden_public_curve_fields": [],
+  "sealed_labels_in_public": false,
+  "diagnostic_law_sha256": "10240ea988f496909d8554dfbc61b56d4e9bfd017f055e854a235b1a887e80ff"
+}

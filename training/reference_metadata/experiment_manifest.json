@@ -1,0 +1,83 @@
+{
+  "created_at_utc": "2026-07-28T06:29:53.296322+00:00",
+  "feature_contract": "bhump_degradation_invariant",
+  "feature_mode": "invariant",
+  "features": [
+    "voltage_slope_segment_1",
+    "voltage_slope_segment_2",
+    "voltage_slope_per_second",
+    "delta_passage_time_v3p60_to_v3p55",
+    "delta_passage_time_v3p55_to_v3p50",
+    "delta_passage_time_v3p50_to_v3p45",
+    "delta_passage_time_v3p30_to_v3p25",
+    "delta_passage_time_v3p70_to_v3p65",
+    "delta_voltage_skew",
+    "delta_passage_time_v3p25_to_v3p20",
+    "delta_passage_time_v3p75_to_v3p70",
+    "delta_passage_time_v3p40_to_v3p35",
+    "delta_passage_time_v3p20_to_v3p15",
+    "delta_passage_time_v3p15_to_v3p10",
+    "delta_passage_time_v3p10_to_v3p05",
+    "delta_voltage_kurtosis"
+  ],
+  "source_unit": "B0018",
+  "source_labels_calibrated": true,
+  "l2sp_weight": 0.1,
+  "pcgrad_weight": 0.05,
+  "configuration": {
+    "window": 8,
+    "channels": [
+      16,
+      24
+    ],
+    "kernel": 3,
+    "dropout": 0.1,
+    "projection": 16,
+    "batch_size": 256,
+    "ssl_epochs": 16,
+    "source_epochs": 30,
+    "adapt_epochs": 45,
+    "patience": 7,
+    "head_learning_rate": 0.0005,
+    "encoder_learning_rate": 5e-05,
+    "source_learning_rate": 0.0003,
+    "ssl_learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "huber_beta": 0.01,
+    "mask_fraction": 0.15,
+    "reconstruction_weight": 0.3,
+    "order_weight": 0.1,
+    "orthogonality_weight": 0.03,
+    "alignment_weight": 0.003,
+    "head_only_epochs": 5,
+    "last_block_epochs": 10
+  },
+  "methods": [
+    "target_only",
+    "target_ssl",
+    "law_calibrated_finetune"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "subset_sizes": [
+    5,
+    10,
+    20
+  ],
+  "stable_positive_transfer_found": true,
+  "stable_methods": [
+    "law_calibrated_finetune"
+  ],
+  "rul_evaluation": {
+    "executed": true,
+    "method": "law_calibrated_finetune",
+    "subset_size": 10,
+    "seed": 44
+  },
+  "sealed_features_accessed": false,
+  "sealed_labels_accessed": false,
+  "conclusion": "stable positive transfer found"
+}
