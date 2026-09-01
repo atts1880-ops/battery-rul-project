@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checkpoint_count": 0,
+  "source_devices": 12,
+  "source_eol_range_efc": [
+    201.98500668788813,
+    540.8473503305232
+  ],
+  "target_train_devices": 320,
+  "target_validation_devices": 80,
+  "feature_count": 16,
+  "feature_contract": [
+    "voltage_slope_segment_1",
+    "voltage_slope_segment_2",
+    "voltage_slope_per_second",
+    "delta_passage_time_v3p60_to_v3p55",
+    "delta_passage_time_v3p55_to_v3p50",
+    "delta_passage_time_v3p50_to_v3p45",
+    "delta_passage_time_v3p30_to_v3p25",
+    "delta_passage_time_v3p70_to_v3p65",
+    "delta_voltage_skew",
+    "delta_passage_time_v3p25_to_v3p20",
+    "delta_passage_time_v3p75_to_v3p70",
+    "delta_passage_time_v3p40_to_v3p35",
+    "delta_passage_time_v3p20_to_v3p15",
+    "delta_passage_time_v3p15_to_v3p10",
+    "delta_passage_time_v3p10_to_v3p05",
+    "delta_voltage_kurtosis"
+  ],
+  "target_raw_root": "D:\\basilisk-2.11.0\\battery_target_domain\\output\\v1.4_alt26_diverse_final\\formal\\battery_v14_public",
+  "private_oracle_included": false,
+  "sealed_complete_labels_included": false
+}

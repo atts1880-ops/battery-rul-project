@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "conditions": {
+    "macro_improvement_at_least_2_percent": false,
+    "at_least_two_of_three_seeds": false,
+    "v10_within_5_percent": false,
+    "v15_not_worse_than_pooled": false,
+    "worst_domain_not_worse": false,
+    "beats_parameter_control_by_1_percent": true
+  },
+  "seed_wins": 0
+}

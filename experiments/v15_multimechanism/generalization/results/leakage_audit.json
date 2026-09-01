@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "violations": [],
+  "feature_count": 16,
+  "domain_identity_input": false,
+  "future_information_input": false,
+  "validation_accessed_during_selection": false,
+  "sealed_accessed": false
+}

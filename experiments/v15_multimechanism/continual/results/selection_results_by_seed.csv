@@ -1,0 +1,10 @@
+method,seed,selection_worst_domain_mae
+inherited_ft,52,18.110641479492188
+inherited_ft,53,17.57149887084961
+inherited_ft,54,20.612876892089844
+inherited_mldg,52,18.293550491333008
+inherited_mldg,53,17.38956069946289
+inherited_mldg,54,15.602287292480469
+inherited_mldg_groupdro,52,21.308944702148438
+inherited_mldg_groupdro,53,17.510080337524414
+inherited_mldg_groupdro,54,18.163686752319336

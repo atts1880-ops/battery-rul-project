@@ -1,0 +1,44 @@
+{
+  "schema_version": "nasa-alt26-bhump-v1",
+  "generated_at_utc": "2026-07-31T09:08:57.889484+00:00",
+  "official_archive_url": "https://data.nasa.gov/docs/legacy/battery_alt_dataset.zip",
+  "archive_bytes": 538163217,
+  "archive_sha256": "89209acddbad47506d781698fc51ebe9d7cdb8968667698f63e63aa730981d21",
+  "pack_count": 26,
+  "source_group_counts": {
+    "regular_alt_batteries": 15,
+    "recommissioned_batteries": 8,
+    "second_life_batteries": 3
+  },
+  "role_counts": {
+    "exact_rul_reference": 12,
+    "censored_soh_and_ssl": 8,
+    "ssl_only_too_few_reference_curves": 6
+  },
+  "strict_rul_units": [
+    "ALT26_recommissioned_battery02",
+    "ALT26_recommissioned_battery03",
+    "ALT26_recommissioned_battery12",
+    "ALT26_recommissioned_battery24",
+    "ALT26_recommissioned_battery25",
+    "ALT26_recommissioned_battery32",
+    "ALT26_recommissioned_battery33",
+    "ALT26_regular_alt_battery01",
+    "ALT26_regular_alt_battery11",
+    "ALT26_regular_alt_battery22",
+    "ALT26_regular_alt_battery31",
+    "ALT26_regular_alt_battery41"
+  ],
+  "strict_rul_unit_count": 12,
+  "compact_feature_count": 16,
+  "rich_feature_count": 252,
+  "valid_reference_curves": 395,
+  "strict_rul_rows": 236,
+  "rejected_reference_curves": 15,
+  "time_axis": "cumulative discharge Ah / first reference capacity (EFC)",
+  "soh_definition": "reference discharge capacity / first valid reference capacity",
+  "eol_definition": "relative SOH = 0.80, linearly interpolated in EFC",
+  "pack_voltage_conversion": "auto-detected two-series-cell pack voltage divided by 2",
+  "capacity_is_model_input": false,
+  "sealed_data_accessed": false
+}

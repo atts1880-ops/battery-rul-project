@@ -39,6 +39,7 @@ python train_bhump_v10_nasa_dynamics_full320.py `
 
 - `train_bhump_v10_nasa_dynamics_pretrain.py`：NASA5 多时间跨度退化动力学预训练。
 - `train_bhump_v10_nasa_dynamics_full320.py`：最终全 320 台 V1.0 迁移微调与三种子集成入口。
+- `prepare_bhump_transfer_data.py`、`prepare_bhump_v11_spectrum.py`：V1.4.1/V1.5 研究分支复用的冻结 BHUMP 曲线特征提取模块。
 - 其余 `train_bhump_*.py` 和 `bhump_common.py`：TCN24、B_stats38、跨电池参考、数据审计与训练工具依赖。
 
 训练只使用冻结的 16 维 BHUMP 特征作为网络输入。容量、真实 SOH、RUL、EOL、真实内阻和未来曲线只可用于标签或审计，不会被接入推理输入。

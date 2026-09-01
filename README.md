@@ -38,6 +38,7 @@ datasets/                    NASA5 源域与 Basilisk V1.0 训练数据
   target_basilisk_v10/       320 台目标训练设备
 model/                       冻结三种子集成模型与推理程序
 training/                    预训练、迁移微调、集成训练与冻结 OOF 配置
+experiments/                 长寿命与多机理研究分支，不参与最终提交模型
 DATASET_MANIFEST.json        数据范围与统计信息
 SHA256SUMS.csv               文件完整性哈希
 ```
@@ -70,6 +71,10 @@ python model\predict_battery_rul.py `
 ## 从头重训
 
 训练顺序为 NASA5 动态预训练、Basilisk V1.0 目标域适配、B_stats 与跨电池参考分支训练，最后导出 seed 52/53/54 集成。完整命令见 [training/README.md](training/README.md)。最终 full320 重训只使用仓库内的 320 台 V1.0 训练设备，且不读取 validation、sealed 或 OOD 数据。
+
+## 研究分支
+
+[experiments/](experiments/README.md) 进一步收录两个独立方向：未训练的 ALT26 -> Basilisk V1.4.1 长寿命模型定义，以及 V1.0 + V1.5 的 pooled、multi-expert、MLDG、GroupDRO、SWAD 对照实验。它们均保留真实筛选状态和负结果，不会被主模型推理程序加载。
 
 ## GitHub 上传
 

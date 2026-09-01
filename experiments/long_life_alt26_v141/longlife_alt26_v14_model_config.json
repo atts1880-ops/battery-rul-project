@@ -1,0 +1,48 @@
+{
+  "status": "UNTRAINED",
+  "model_name": "ALT26_to_Basilisk_V1.4.1_longlife_TCN_Bstats_intercell",
+  "source_domain": {
+    "dataset": "NASA_ALT26",
+    "complete_eol_devices": 12,
+    "eol_range_efc": [202.0, 540.8]
+  },
+  "target_domain": {
+    "dataset": "Basilisk_V1.4.1_ALT26_matched_diverse",
+    "train_devices": 320,
+    "validation_devices": 80,
+    "formal_eol_range_efc": [202, 538]
+  },
+  "input": {
+    "window_cycles": 24,
+    "cycle_feature_count": 16,
+    "causal_history_feature_count": 38,
+    "forbidden": ["capacity", "true_soh", "rul", "eol", "soc", "true_resistance", "future"]
+  },
+  "tcn": {
+    "channels": [16, 24, 24],
+    "dilations": [1, 2, 4],
+    "kernel_size": 3,
+    "dropout": 0.1,
+    "projection_dim": 16
+  },
+  "transfer": {
+    "progress_knots": 32,
+    "source_filter": "source_dataset == NASA_ALT26",
+    "intercell_target": "delta_log_eol",
+    "methods": [
+      "target_ssl_bstats",
+      "target_reference_control",
+      "alt26_direct",
+      "alt26_progress_intercell"
+    ]
+  },
+  "evaluation": {
+    "outer_folds": 5,
+    "formal_seeds": [42, 43, 44],
+    "split_level": "unit_id",
+    "primary_metric": "all_point_rul_mae_efc",
+    "secondary_metrics": ["normalized_mae", "lifetime_bin_macro_mae", "bias", "p90", "worst_device_mae"]
+  },
+  "checkpoint_count": 0,
+  "performance_claim": null
+}

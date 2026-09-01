@@ -1,0 +1,74 @@
+{
+  "created_at_utc": "2026-08-15T07:49:52.454060+00:00",
+  "schema_version": "bhump-v10-v15-generalization-v1",
+  "methods": [
+    "v10_only",
+    "v15_only",
+    "pooled",
+    "pooled_wide_control",
+    "multi_expert",
+    "pooled_target_only",
+    "multi_expert_target_only"
+  ],
+  "screen_seeds": [
+    52,
+    53,
+    54
+  ],
+  "additional_seeds_run": [],
+  "features": [
+    "voltage_slope_segment_1",
+    "voltage_slope_segment_2",
+    "voltage_slope_per_second",
+    "delta_passage_time_v3p60_to_v3p55",
+    "delta_passage_time_v3p55_to_v3p50",
+    "delta_passage_time_v3p50_to_v3p45",
+    "delta_passage_time_v3p30_to_v3p25",
+    "delta_passage_time_v3p70_to_v3p65",
+    "delta_voltage_skew",
+    "delta_passage_time_v3p25_to_v3p20",
+    "delta_passage_time_v3p75_to_v3p70",
+    "delta_passage_time_v3p40_to_v3p35",
+    "delta_passage_time_v3p20_to_v3p15",
+    "delta_passage_time_v3p15_to_v3p10",
+    "delta_passage_time_v3p10_to_v3p05",
+    "delta_voltage_kurtosis"
+  ],
+  "feature_count": 16,
+  "tcn_window": 24,
+  "history_statistics": 38,
+  "source_units": [
+    "B0005",
+    "B0018",
+    "B0033",
+    "B0043",
+    "B0044"
+  ],
+  "device": "cuda",
+  "screening_decision": {
+    "passed": false,
+    "conditions": {
+      "macro_improvement_at_least_2_percent": false,
+      "at_least_two_of_three_seeds": false,
+      "v10_within_5_percent": false,
+      "v15_not_worse_than_pooled": false,
+      "worst_domain_not_worse": false,
+      "beats_parameter_control_by_1_percent": true
+    },
+    "seed_wins": 0
+  },
+  "formal_acceptance": {
+    "passed": false,
+    "reason": "five_formal_seeds_not_available"
+  },
+  "data_hashes": {
+    "D:\\basilisk-2.11.0\\battery_tcn_lstm_reproduction\\bhump_transfer_v10_data": "3e6061c7842796bb1a8a255f3c3e66e240fc476807ef0fcc7a6dd5f2a68d2fb2",
+    "D:\\basilisk-2.11.0\\battery_tcn_lstm_reproduction\\bhump_transfer_v15_nasa5_ecm_data": "86e9e8734ef5ebe5e82a9eda3d4dd0337d1b96f53b2cb0a46c8c6d17ee246db1"
+  },
+  "domain_identity_is_model_input": false,
+  "future_information_is_model_input": false,
+  "validation_hashes": {},
+  "validation_accessed": false,
+  "sealed_accessed": false,
+  "note": "Validation is opened only after the five-seed OOF acceptance gate passes."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "checks": {
+    "v10_validation_mae_le_5": true,
+    "selection_worst_domain_improves_5pct_over_inherited_ft": true,
+    "nasa_improves_2pct_over_target_control": false,
+    "paired_bootstrap_ci95_upper_below_zero": false,
+    "soh_mae_within_5pct_of_registered_0p01151": false
+  },
+  "note": "Per-domain <=10% degradation requires registered domain-specific baselines and is reported separately."
+}
